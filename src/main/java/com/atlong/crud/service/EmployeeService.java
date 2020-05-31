@@ -13,15 +13,18 @@ import java.util.List;
 public class EmployeeService {
     @Autowired
     EmployeeMapper employeeMapper;
+
     //查询所有员工
-    public List<Employee> getAll(){
+    public List<Employee> getAll() {
         return employeeMapper.selectByExampleWithDept(null);
     }
-//员工保存方法
+
+    //员工保存方法
     public void saveEmp(Employee employee) {
         employeeMapper.insertSelective(employee);
     }
-//检验用户名是否可用
+
+    //检验用户名是否可用
     public boolean checkUser(String empName) {
         EmployeeExample example = new EmployeeExample();
         EmployeeExample.Criteria criteria = example.createCriteria();
@@ -30,7 +33,8 @@ public class EmployeeService {
         return count == 0;
         //true可用
     }
-        //按照员工id查询
+
+    //按照员工id查询
     public Employee getEmp(Integer id) {
         Employee employee = employeeMapper.selectByPrimaryKey(id);
         return employee;
@@ -40,7 +44,8 @@ public class EmployeeService {
     public void updateEmp(Employee employee) {
         employeeMapper.updateByPrimaryKeySelective(employee);
     }
-            //员工删除
+
+    //员工删除
     public void daleteEmp(Integer id) {
         employeeMapper.deleteByPrimaryKey(id);
     }

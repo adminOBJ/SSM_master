@@ -3,6 +3,7 @@ package com.atlong.crud.bean;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class DepartmentExample {
     protected String orderByClause;
 

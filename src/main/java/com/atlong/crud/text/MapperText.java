@@ -18,7 +18,7 @@ import java.util.UUID;
  * @project:SSM-master
  * @date : 2020-05-23 16:40
  * @description:测试dao层的工作
- * 推荐Spring的项目就可以使用 spring的单元测试，就可以自动主人我们需要的组件
+ * 推荐Spring的项目就可以使用 spring的单元测试，就可以自动注入我们需要的组件
  * 1.先导入spring-test依赖
  * 2.@ContextConfiguration指定spring配置文件的位置
  * 3.直接autowired要使用的组件
